@@ -1,0 +1,10 @@
+<div class="centered">
+  <audio autoplay controls>
+    <source src="speech/<%= @word.word %>.aac" type="audio/aac">
+  </audio>
+
+  <%= form_tag 'check' do %>
+    <%= hidden_field_tag :word_id, @word.id %>
+    <%= text_field_tag :word, '', class: 'form-control input-lg', autofocus: true %>
+  <% end %>
+</div>

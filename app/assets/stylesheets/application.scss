@@ -1,0 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootswatch/slate/variables";
+@import "bootstrap";
+
+// Bootstrap body padding for fixed navbar
+body {
+  padding-top: 70px;
+}
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 65px;
+    height: 65px;
+    padding-top: 0;
+}
+
+@import "bootswatch/slate/bootswatch";
+
+// Whatever application styles you have go last
+@import "normalize-rails";
+@import "main";
