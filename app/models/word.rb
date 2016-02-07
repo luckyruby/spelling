@@ -3,6 +3,7 @@ class Word < ActiveRecord::Base
   before_save :downcase_word
 
   scope :active, -> { where active: true }
+  scope :inactive, -> { where active: false }
 
   private
 

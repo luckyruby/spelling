@@ -21,4 +21,8 @@ class WordsController < ApplicationController
     Word.update_all active: true
     redirect_to root_path
   end
+
+  def correct
+    @words = Word.inactive
+  end
 end
