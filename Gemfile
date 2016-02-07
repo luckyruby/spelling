@@ -20,17 +20,12 @@ gem 'bootswatch-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
-
-group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'quiet_assets'
   gem 'capistrano', '~> 3.4.0'
   gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rails', '~> 1.0.0'
+  gem 'capistrano-rails', '~> 1.1.0'
   gem 'capistrano3-puma'
 end
