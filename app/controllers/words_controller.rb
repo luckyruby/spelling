@@ -6,7 +6,7 @@ class WordsController < ApplicationController
       flash[:notice] = "Correct!"
       word.update_attribute(:active, false)
     else
-      flash[:error] = "Wrong. The word is spelled #{word.word}."
+      flash[:error] = "Wrong. You wrote #{params[:word]}. The correct spelling is #{word.word}."
       Attempt.create!(attempt: params[:word], ip_address: request.remote_ip, word_id: params[:word_id])
     end
     redirect_to root_path
