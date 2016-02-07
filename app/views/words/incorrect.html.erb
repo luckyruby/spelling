@@ -1,0 +1,17 @@
+<h3>Incorrect Attempts</h3>
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+    <th>Time</th>
+    <th>Word</th>
+    <th>Attempt</th>
+    <th>IP Address</th>
+  </tr>
+  <% @attempts.each do |a| %>
+    <tr>
+      <td><%= a.created_at.strftime("%m/%d/%Y %H:%M:%S") %></td>
+      <td><%= a.word.word %></td>
+      <td><%= a.attempt %></td>
+      <td><%= a.ip_address %></td>
+    </tr>
+  <% end %>
+</table>

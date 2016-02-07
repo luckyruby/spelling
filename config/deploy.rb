@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'spelling'
-set :repo_url, 'git@git.luckyruby.com:luckyruby/spelling.git'
+set :repo_url, "ssh://git@github.com/luckyruby/spelling.git"
 set :deploy_to, "/var/www/spelling"
 set :scm, :git
 set :linked_files, %w{config/database.yml config/secrets.yml config/config.yml}
