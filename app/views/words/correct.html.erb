@@ -1,9 +1,6 @@
 <h3>Correctly Spelled Words</h3>
 Count: <%= @words.length %>
 <table class="table table-bordered table-striped table-hover">
-  <tr>
-    <th>Word</th>
-  </tr>
   <% @words.each do |w| %>
     <tr>
       <td><%= w.word %></td>
