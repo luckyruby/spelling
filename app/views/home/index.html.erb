@@ -5,6 +5,6 @@
 
   <%= form_tag 'check' do %>
     <%= hidden_field_tag :word_id, @word.id %>
-    <%= text_field_tag :word, '', class: 'form-control input-lg', autofocus: true %>
+    <%= text_field_tag :word, '', class: 'form-control input-lg', autofocus: true, autocomplete: 'off' %>
   <% end %>
 </div>
