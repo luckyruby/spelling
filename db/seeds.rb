@@ -7,6 +7,7 @@ def import_words(filename, difficulty, grade, word_bank)
       next if word_bank[word]
       if File.exist?("public/speech/#{word}.aac")
         Word.create!(word: word, difficulty: difficulty, grade: grade)
+        puts "#{word} file exists."
       else
         params = {
           hl: 'en-us',

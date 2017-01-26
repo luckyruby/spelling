@@ -14,3 +14,4 @@
 /config/database.yml
 /config/config.yml
 /config/secrets.yml
+/public/speech/*
