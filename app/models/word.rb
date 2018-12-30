@@ -1,4 +1,4 @@
-class Word < ActiveRecord::Base
+class Word < ApplicationRecord
   validates :word, uniqueness: true
   before_save :downcase_word
 

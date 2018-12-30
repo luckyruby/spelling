@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Spelling</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to "Spelling Tutor", root_path, class: "navbar-brand" %>
-      </div>
-    </div>
-  </div>
+  <head>
+    <title>Spelling Bee Trainer</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <div class="container">
-    <%= bootstrap_flash %>
-    <%= yield %>
-  </div> <!-- /container -->
-  <!-- Javascripts
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <%= javascript_include_tag "application", "data-turbolinks-eval" => false %>
-  <%= yield(:page_javascript) if content_for?(:page_javascript) %>
-</body>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: 'defer' %>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </body>
 </html>

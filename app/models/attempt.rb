@@ -1,4 +1,4 @@
-class Attempt < ActiveRecord::Base
+class Attempt < ApplicationRecord
   belongs_to :word
 
 end

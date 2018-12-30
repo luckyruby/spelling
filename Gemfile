@@ -1,37 +1,31 @@
 source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+ruby '2.5.1'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.0'
+gem 'rails', '~> 5.2.2'
+gem 'pg', '>= 0.18', '< 2.0'
+gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
-gem 'therubyracer', platforms: :ruby
-gem 'jquery-rails'
-gem 'turbolinks'
+gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'http'
-gem 'twitter-bootstrap-rails'
-gem 'normalize-rails'
-gem 'bootswatch-rails'
-gem 'bootstrap-sass'
+gem 'bootsnap', '>= 1.1.0', require: false
+gem 'haml'
+gem 'devise'
+gem 'bootstrap', '~> 4.1.3'
 
 group :development, :test do
-  gem 'byebug', platform: :mri
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  gem 'web-console'
-  gem 'listen', '~> 3.0.5'
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'capistrano', '~> 3.6'
-  gem 'capistrano-bundler', '~> 1.2'
-  gem 'capistrano-rails', '~> 1.2'
-  gem 'capistrano3-puma'
+  gem 'capistrano-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
